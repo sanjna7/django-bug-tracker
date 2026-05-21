@@ -1,13 +1,10 @@
 <h1>Bug Tracker</h1>
-<a href="{% url 'bug_create' %}">Report New Bug</a>
 <ul>
 {% for bug in bugs %}
-	<1i>
-		<a href="{% url 'bug_detail' bug.pk %}">{{ bug.title }}</a>
-		- Status: {{ bug.status }}
+	<li>
+		{{ bug.title }} - Status: {{ bug.status }}
 	</li>
 {% empty %}
 	<li>No bugs yet.</li>
 {% endfor %}
 </ul>
-
